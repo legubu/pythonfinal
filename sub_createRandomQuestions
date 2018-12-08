@@ -1,0 +1,11 @@
+import random
+def randomQuestionsOrder():
+    with open('Questions.txt','r') as source:
+        data = [ (random.random(), line) for line in source ]
+    data.sort()
+    with open('randomQuestions','w') as target:
+        for _, line in data:
+            target.write( line )
+    with open('randomQuestions','r') as target:
+        print target.readlines()
+randomQuestionsOrder()
