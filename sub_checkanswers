@@ -3,8 +3,20 @@ def checkanswers(answer, correct):
     score = score + 10
     print "That's correct!"
     if positiveStoryProgress == 0:
-      #insert first positive story element here
-    storyprogress
+      print #insert first positive story element here
+    elif positiveStoryProgress == 1:
+      print #insert second positive story element here
+    elif positiveStoryProgress == 2:
+      print #insert third story element here (VICTORY! Reward the user.) 
+      #insert victory subprogram here
+    positiveStoryProgress = positiveStoryProgress + 1
   else:
     score = score - 7
-    lives = lives - 1
+    if negativeStoryProgress == 0:
+      print #insert first negative story element here
+    elif negativeStoryProgress == 1:
+      print #insert second negative story element here
+    elif negativeStoryProgress == 2:
+      print #insert third story element here (DEFEAT! Punish the user and send them back to the start.) 
+      #insert defeat subprogram here
+    negativeStoryProgress = positiveStoryProgress + 1
