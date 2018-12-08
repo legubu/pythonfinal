@@ -6,12 +6,26 @@ def delay_print(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.25)
+        time.sleep(0.01)
+        
 #request user input
 def userInput():
   name = raw_input("What's your name?: ")
-  age = input("How old are you?: ")
-  sex = raw_input("Are you male, female or cyborg? Write 'm', 'f' or 'c': ")
+  ageTrigger = True
+  while ageTrigger == True:
+      try:
+          age = input("How old are you?: ")
+          ageTrigger = False
+      except NameError:
+          print "That's not a number."
+  sexTrigger = True
+  while sexTrigger == True:
+      sex = raw_input("Are you male, female or cyborg? Write 'm', 'f' or 'c': ")
+      sexStandard = sex.lower()
+      if sexStandard == "m" or "f" or "c":
+        sexTrigger = False
+      else:
+        print "Are you serious?"
   difficulty = raw_input("Select difficulty: medium ('m'), hard ('h'), or brutal ('b'): ")
   difficultyStandard = difficulty.lower()
 
@@ -39,6 +53,6 @@ def loadFile():
     print "success"
 
 # Greeting
-greeting = "By hazards of fate, you found yourself in a cave surrounded by a dozen of beehives, next to you,"
+greeting = "By hazards of fate, you found yourself in a cave surrounded by a dozen of beehives, next to you...\n"
 delay_print(greeting)
 chooseFunction()
