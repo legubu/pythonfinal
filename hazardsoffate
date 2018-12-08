@@ -28,8 +28,14 @@ def userInput():
         sexTrigger = False
       else:
         print "Are you serious?"
-  difficulty = raw_input("Select difficulty: medium ('m'), hard ('h'), or brutal ('b'): ")
-  difficultyStandard = difficulty.lower()
+  difficultyTrigger = True
+  while difficultyTrigger == True:
+      difficulty = raw_input("Select difficulty: medium ('m'), hard ('h'), or brutal ('b'): ")
+      difficultyStandard = difficulty.lower()
+      if difficultyStandard == "m" or difficultyStandard == "h" or difficultyStandard == "b":
+        difficultyTrigger = False
+      else:
+        print "You can do this..."
 
 #choose function
 def chooseFunction():
