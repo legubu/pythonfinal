@@ -26,5 +26,3 @@ Please follow the instructions."""
 def loadFile():
   with open("Questions.txt", "r") as fileQuestions:
     print "success"
- 
- this is a test
