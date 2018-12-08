@@ -61,6 +61,6 @@ def loadFile():
     print "success"
 
 # Greeting
-greeting = "By hazards of fate, you found yourself in a cave surrounded by a dozen of beehives, next to you...\n"
+greeting = "By hazards of fate, you found yourself in a cave surrounded by a dozen beehives, next to you...\n"
 delay_print(greeting)
 chooseFunction()
