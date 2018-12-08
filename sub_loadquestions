@@ -1,1 +1,5 @@
-
+def readQuestions():
+  with open("Questions.txt", "r") as openQuestions:
+  positionofQ = openQuestions.find("Q1:")
+  endpositionofQ = openQuestions.find("FQ1")
+  print openQuestions(positionofQ+1, endofpositionofQ-1)
