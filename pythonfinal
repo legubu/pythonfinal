@@ -1,0 +1,30 @@
+#request user input
+def userInput():
+  name = raw_input("What's your name?: ")
+  age = input("How old are you?: ")
+  sex = raw_input("Are you male, female or cyborg? Write 'm', 'f' or 'c': ")
+
+#choose function
+def chooseFunction():
+  choiceTrigger = True
+  while choiceTrigger == True:
+    choice = raw_input("To play the game, press P. To see the leaderboards, press L. ")
+    choiceStandard = choice.lower()
+    if choiceStandard == "p":
+      print "Welcome to the game!"
+      choiceTrigger = False
+      userInput()
+    elif choiceStandard == "l":
+      print "Here are the leaderboards."
+      choiceTrigger = False
+    else:
+      print """That's not a valid input.
+This is not a moment to be a rebel.
+Please follow the instructions."""
+
+#load file
+def loadFile():
+  with open("Questions.txt", "r") as fileQuestions:
+    print "success"
+ 
+
