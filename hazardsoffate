@@ -16,13 +16,15 @@ def userInput():
       try:
           age = input("How old are you?: ")
           ageTrigger = False
+          if age > 99:
+              print "Damn you're old."
       except NameError:
           print "That's not a number."
   sexTrigger = True
   while sexTrigger == True:
       sex = raw_input("Are you male, female or cyborg? Write 'm', 'f' or 'c': ")
       sexStandard = sex.lower()
-      if sexStandard == "m" or "f" or "c":
+      if sexStandard == "m" or sexStandard == "f" or sexStandard == "c":
         sexTrigger = False
       else:
         print "Are you serious?"
