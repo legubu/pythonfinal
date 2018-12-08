@@ -69,6 +69,8 @@ def loadFile():
 score = 0
 positiveStoryProgress = 0
 negativeStoryProgress = 0
+counter = 1
+
 
 # Greeting
 greeting = "By Hazards of Fate, you found yourself in a cave surrounded by a dozen beehives, next to you...\n"
