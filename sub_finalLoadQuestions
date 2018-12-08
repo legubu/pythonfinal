@@ -23,6 +23,7 @@ while victoryCondition == False:
     with open("randomQuestions.txt","r") as openQuestions:
         tst = openQuestions.readlines()
         print tst[counter]
+         #sub_process_answer
         counter = counter + 1
         
         #to be erased after testing
