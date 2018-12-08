@@ -62,6 +62,13 @@ def loadFile():
   with open("Questions.txt", "r") as fileQuestions:
     print "success"
 
+#THE MAIN PROGRAM BEGINS HERE
+
+#defining a few key variables
+score = 0
+positiveStoryProgress = 0
+negativeStoryProgress = 0
+
 # Greeting
 greeting = "By Hazards of Fate, you found yourself in a cave surrounded by a dozen beehives, next to you...\n"
 delay_print(greeting)
