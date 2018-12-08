@@ -1,5 +1,10 @@
-def readQuestions():
+s = "Q3:"
+
+def readQuestions(s):
   with open("Questions.txt", "r") as openQuestions:
-  positionofQ = openQuestions.find("Q1:")
-  endpositionofQ = openQuestions.find("FQ1")
-  print openQuestions(positionofQ+1, endofpositionofQ-1)
+    for line in openQuestions:
+      correctLine = line.count(s)
+      if correctLine == 1:
+          print line
+          
+readQuestions(s)
