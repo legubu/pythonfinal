@@ -1,1 +1,10 @@
-
+def checkanswers(answer, correct):
+  if answer == correct:
+    score = score + 10
+    print "That's correct!"
+    if positiveStoryProgress == 0:
+      #insert first positive story element here
+    storyprogress
+  else:
+    score = score - 7
+    lives = lives - 1
