@@ -1,0 +1,31 @@
+import random
+def randomQuestionsOrder():
+    with open('Questions.txt','r') as source:
+        data = [ (random.random(), line) for line in source ]
+    data.sort()
+    with open('randomQuestions.txt','w') as target:
+        for _, line in data:
+            target.write( line )
+
+def readQuestions(s):
+  with open("randomQuestions.txt", "r") as openQuestions:
+    for line in openQuestions:
+      correctLine = line.count(s)
+      if correctLine == 1:
+          print line
+
+counter = 1
+victoryCondition = False
+
+randomQuestionsOrder()
+
+while victoryCondition == False:
+    with open("randomQuestions.txt","r") as openQuestions:
+        tst = openQuestions.readlines()
+        print tst[counter]
+        counter = counter + 1
+        
+        #to be erased after testing
+        if counter > 7:
+            victoryCondition = True
+
