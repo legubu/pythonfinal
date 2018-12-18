@@ -62,6 +62,25 @@ Please follow the instructions."""
 def loadFile():
   with open("Questions.txt", "r") as fileQuestions:
     print "success"
+    
+#def randomQuestionsOrder():
+    with open('Questions.txt','r') as source:
+        data = [ (random.random(), line) for line in source ]
+    data.sort()
+    with open('randomQuestions','w') as target:
+        for _, line in data:
+            target.write( line )
+    with open('randomQuestions','r') as target:
+        print target.readlines()
+    
+#determine if the user wins or loses
+def victoryAndDefeat(positiveStoryProgress, negativeStoryProgress):
+    if positiveStoryProgress == 2:
+        print "Victory!"
+    elif negativeStoryProgress == 2:
+        print "Defeat!"
+    else:
+        continue
 
 #THE MAIN PROGRAM BEGINS HERE
 
@@ -78,3 +97,5 @@ That is, until a green-eyed spirit appears in front of you and offers to help. I
 However, get three questions wrong and a faith worse than death shall await you..."""
 delay_print(greeting)
 chooseFunction()
+print "Generating questions..."
+randomQuestionsOrder()
