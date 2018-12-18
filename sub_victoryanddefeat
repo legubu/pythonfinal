@@ -1,1 +1,7 @@
-
+def victoryAndDefeat(positiveStoryProgress, negativeStoryProgress):
+    if positiveStoryProgress == 2:
+        print "Victory!"
+    elif negativeStoryProgress == 2:
+        print "Defeat!"
+    else:
+        continue
