@@ -63,7 +63,7 @@ def loadFile():
   with open("Questions.txt", "r") as fileQuestions:
     print "success"
     
-#def randomQuestionsOrder():
+def randomQuestionsOrder():
     with open('Questions.txt','r') as source:
         data = [ (random.random(), line) for line in source ]
     data.sort()
@@ -72,6 +72,18 @@ def loadFile():
             target.write( line )
     with open('randomQuestions','r') as target:
         print target.readlines()
+        
+def askQuestion():
+    with open('randomQuestions','r') as target:
+        #TO BE CONTINUED
+        answer =
+        return answer
+        
+def determineCorrect():
+    with open('randomQuestions','r') as target:
+        #TO BE CONTINUED
+        correct =
+        return correct
     
 #determine if the user wins or loses
 def victoryAndDefeat(positiveStoryProgress, negativeStoryProgress):
