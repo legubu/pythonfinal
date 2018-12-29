@@ -85,7 +85,7 @@ def askQuestion():
 def determineCorrect():
     with open('randomQuestions','r') as target:
         #TO BE CONTINUED
-        correct =
+        correct = "TEST"
         return correct
     
 #determine if the user wins or loses
