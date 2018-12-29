@@ -75,8 +75,11 @@ def randomQuestionsOrder():
         
 def askQuestion():
     with open('randomQuestions','r') as target:
-        #TO BE CONTINUED
-        answer =
+        content = target.read()
+        start = content.find("Q")
+        end = content.find("?")
+        print content[start:end + 1]
+        answer = raw_input("What is the anwer to this question? ")
         return answer
         
 def determineCorrect():
