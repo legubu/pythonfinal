@@ -70,8 +70,6 @@ def randomQuestionsOrder():
     with open('randomQuestions','w') as target:
         for _, line in data:
             target.write( line )
-    with open('randomQuestions','r') as target:
-        print target.readlines()
         
 def defineQuestion():
     with open('randomQuestions','r') as target:
