@@ -109,3 +109,13 @@ delay_print(greeting)
 chooseFunction()
 print "Generating questions..."
 randomQuestionsOrder()
+while positiveStoryProgress < 2 and negativeStoryProgress < 2:
+    userAnswer = askQuestion()
+    correctAnswer = determineCorrect(userAnswer)
+    if userAnswer == correctAnswer:
+        print "Correct!"
+        positiveStoryProgress = positiveStoryProgress + 1
+    if userAnswer != correctAnswer:
+        print "False!"
+        negativeStoryProgress = negativeStoryProgress + 1
+    victoryAndDefeat(positiveStoryProgress, negativeStoryProgress)
