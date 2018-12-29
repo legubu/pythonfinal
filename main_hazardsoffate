@@ -7,7 +7,7 @@ def delay_print(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
         
 #request user input
 def userInput():
@@ -124,7 +124,9 @@ randomQuestionsOrder()
 while positiveStoryProgress < 3 and negativeStoryProgress < 3:
     question = defineQuestion()
     questionNumber = determineQuestionNumber(question)
-    correctAnswer = determineCorrect(userAnswer)
+    correctAnswer = determineCorrect(questionNumber)
+    print question
+    userAnswer = raw_input("What is the answer to this question? ")
     if userAnswer == correctAnswer:
         print "Correct!"
         positiveStoryProgress = positiveStoryProgress + 1
