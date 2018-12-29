@@ -87,9 +87,9 @@ def determineCorrect():
     
 #determine if the user wins or loses
 def victoryAndDefeat(positiveStoryProgress, negativeStoryProgress):
-    if positiveStoryProgress == 2:
+    if positiveStoryProgress == 3:
         print "Victory!"
-    elif negativeStoryProgress == 2:
+    elif negativeStoryProgress == 3:
         print "Defeat!"
 
 #THE MAIN PROGRAM BEGINS HERE
@@ -109,7 +109,7 @@ delay_print(greeting)
 chooseFunction()
 print "Generating questions..."
 randomQuestionsOrder()
-while positiveStoryProgress < 2 and negativeStoryProgress < 2:
+while positiveStoryProgress < 3 and negativeStoryProgress < 3:
     userAnswer = askQuestion()
     correctAnswer = determineCorrect(userAnswer)
     if userAnswer == correctAnswer:
