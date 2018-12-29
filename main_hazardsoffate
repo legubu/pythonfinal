@@ -88,13 +88,12 @@ def determineQuestionNumber(question):
         
 def determineCorrect(questionNumber):
     with open('QuestionsAndAnswers.txt','r') as target:
-        content = target.read()
-        questionStart = "A" + questionNumber
-        start = content.find(questionStart)
-        nextQuestionNumber = int(questionNumber) + 1
-        nextQuestionStart = "A" + str(nextQuestionNumber)
-        end = content.find(nextQuestionStart)
-        correct = content[start:end]
+        content = target.readlines()
+        answerStart = "A" + questionNumber
+        start = content.find(answerStart)
+        string = content[start:]
+        end = string.find("/")
+        correct = string[:end]
         return correct
     
 #determine if the user wins or loses
@@ -110,7 +109,6 @@ def victoryAndDefeat(positiveStoryProgress, negativeStoryProgress):
 score = 0
 positiveStoryProgress = 0
 negativeStoryProgress = 0
-counter = 1
 
 
 # Greeting
