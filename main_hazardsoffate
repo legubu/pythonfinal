@@ -116,7 +116,7 @@ negativeStoryProgress = 0
 
 
 # Greeting
-greeting = """By Hazards of Fate, you found yourself in a cave surrounded by a dozen beehives. The bees are buzzing angrily and there seems to be no way out of the cave...
+greeting = """By Hazards of Fate, you find yourself in a cave surrounded by a dozen beehives. The bees are buzzing angrily and there seems to be no way out of the cave...
 That is, until a green-eyed spirit appears in front of you and offers to help. If you can answer three questions correctly, he'll help you get out.
 However, get three questions wrong and a faith worse than death shall await you..."""
 delay_print(greeting)
